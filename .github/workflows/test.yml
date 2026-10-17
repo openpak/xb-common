@@ -20,7 +20,7 @@ jobs:
           echo "TMPDIR=$RUNNER_TEMP/scratch" >> "$GITHUB_ENV"
       - name: Build, vet and test in a Go container
         run: |
-          podman run --rm -v "$PWD:/src:Z" -w /src -e GOWORK=off -e GOFLAGS=-buildvcs=false \
+          podman run --rm --pull=newer --platform "linux/$(podman info --format '{{.Host.Arch}}')" -v "$PWD:/src:Z" -w /src -e GOWORK=off -e GOFLAGS=-buildvcs=false \
             docker.io/library/golang:1.26-bookworm sh -ec '
               test -z "$(gofmt -l .)"
               go build ./...
