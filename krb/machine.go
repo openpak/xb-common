@@ -9,7 +9,7 @@ import (
 	"errors"
 	"fmt"
 
-	"openpak/xb-live/internal/xbcrypto"
+	"github.com/openpak/xb-common/xbcrypto"
 )
 
 // UsageMachineAccount is the key usage Xombie uses to seal the account blob in

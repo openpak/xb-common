@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"time"
 
-	"openpak/xb-live/internal/xbcrypto"
+	"github.com/openpak/xb-common/xbcrypto"
 )
 
 // Status is the admission status of a principal. Only StatusActive admits.

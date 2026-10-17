@@ -15,7 +15,7 @@ import (
 	"sort"
 	"strconv"
 
-	"openpak/xb-live/internal/xbcrypto"
+	"github.com/openpak/xb-common/xbcrypto"
 )
 
 // Keyring holds rotation-identified secrets. Ids are the Kerberos key version

@@ -1,0 +1,21 @@
+OpenPak xb-common
+Copyright (C) 2026 OpenPak contributors. Licensed under AGPL-3.0-only (LICENSE).
+
+Provenance
+----------
+This repository was split out of github.com/openpak/xbox-live (branch openpak,
+commit 7fc575dd21485791ed80149deba4f158e66044ae), which is a fork of
+https://github.com/XombieOnline/xombie (AGPL-3.0, base commit
+7a1ef08045271437efc5938c996cb0c209a31408). Git history for the packages below
+is preserved.
+
+Packages that port or take constants/test vectors from Xombie (libs/xblive):
+  - xbcrypto  RC4/HMAC primitives for protocol compatibility
+  - krb       Kerberos structures, key derivation, public Xombie prototype keys
+              (a denylist so deployments refuse them; krb/keys.go)
+
+Packages written for OpenPak, no Xombie code: xbaccountapi, xbenrolapi,
+xbfeature, ratelimit.
+
+No Insignia, leaked Microsoft source or other third-party proprietary material
+was used. Reference: https://github.com/openpak/docs (xbox/native-service-architecture.md).

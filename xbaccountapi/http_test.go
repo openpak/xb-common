@@ -5,9 +5,9 @@ package xbaccountapi
 import (
 	"context"
 	"errors"
+	"github.com/openpak/xb-common/xbcrypto"
 	"net/http"
 	"net/http/httptest"
-	"openpak/xb-live/internal/xbcrypto"
 	"sync"
 	"testing"
 	"time"

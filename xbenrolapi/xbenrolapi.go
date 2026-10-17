@@ -15,7 +15,7 @@ import (
 	"net/http"
 	"strings"
 
-	"openpak/xb-live/internal/xbaccountapi"
+	"github.com/openpak/xb-common/xbaccountapi"
 )
 
 // Status values of an enrolment as seen by the console.

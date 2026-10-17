@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"openpak/xb-live/internal/xbcrypto"
+	"github.com/openpak/xb-common/xbcrypto"
 )
 
 func unhex(t testing.TB, s string) []byte {

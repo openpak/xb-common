@@ -13,7 +13,7 @@ import (
 	"strconv"
 	"time"
 
-	"openpak/xb-live/internal/xbcrypto"
+	"github.com/openpak/xb-common/xbcrypto"
 )
 
 const (
