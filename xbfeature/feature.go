@@ -41,6 +41,8 @@ const (
 
 // Info is the connection context the gateway binds.
 type Info struct {
+	// Client identifies a provisioned emulator ("berth"); empty means native Xbox.
+	Client        string `json:"client,omitempty"`
 	PrincipalID   string `json:"principal_id"`
 	CoreAccountID string `json:"core_account_id"`
 	XUID          uint64 `json:"xuid"`
