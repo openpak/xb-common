@@ -18,4 +18,4 @@ Packages written for OpenPak, no Xombie code: xbaccountapi, xbenrolapi,
 xbfeature, ratelimit.
 
 No Insignia, leaked Microsoft source or other third-party proprietary material
-was used. Reference: https://github.com/openpak/docs (xbox/native-service-architecture.md).
+was used. Reference: OpenPak's internal research notes.

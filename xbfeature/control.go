@@ -21,7 +21,7 @@ const (
 )
 
 // ControlPush asks the gateway to send an SG 0x5309 state-version message.
-// Words are the console's per-user version-vector words (docs/xbox/social-protocol.md 2.3).
+// Words are the console's per-user version-vector words (internal research notes 2.3).
 type ControlPush struct {
 	XUID  uint64   `json:"xuid"`
 	Words []uint32 `json:"words"`
