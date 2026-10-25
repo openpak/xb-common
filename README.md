@@ -1,9 +1,15 @@
-# xb-common
+# Xbox Common Library
 
-Shared Go packages for the OpenPak original-Xbox services (`xb-account`,
-`xb-auth`, `xb-gateway`, `xb-social`, `xb-enroll`, `xb-tou`). Module
-`github.com/openpak/xb-common`. Only code imported by two or more services
-lives here; it holds no feature state and no runtime.
+OpenPak's Xbox Common Library.
+
+| | |
+| --- | --- |
+| Network | Original Xbox |
+| Language | Go module `github.com/openpak/xb-common` |
+| Used by | `xb-account`, `xb-auth`, `xb-gateway`, `xb-social`, `xb-enroll`, `xb-tou` |
+| Licence | AGPL-3.0-only |
+
+## Packages
 
 | Package | Used by | Purpose |
 |---|---|---|
@@ -14,25 +20,26 @@ lives here; it holds no feature state and no runtime.
 | `xbfeature` | account, gateway, social, tou | gateway to feature gRPC stream (`openpak.xb.v1.Feature/Connect`) |
 | `ratelimit` | account, enroll | keyed token-bucket limiter |
 
-Single-service code stays in that service (`sgwire` in xb-gateway, `xbcodes` in xb-account).
-
-## Using it (private module)
+## Use
 
 ```sh
 go env -w GOPRIVATE='github.com/openpak/*' GONOSUMDB='github.com/openpak/*'
 go get github.com/openpak/xb-common@v0.1.0
 ```
 
-Developers authenticate with `gh auth setup-git`. CI image builds read the module
-with the job's `GITHUB_TOKEN` through a build secret (`.netrc`), see each
-service's `release.yml`; the repo's Actions access setting is "accessible from
-repositories in the organization". No tokens are stored in git.
-
-## Development
-
-```sh
-GOWORK=off go build ./... && go vet ./... && go test -race ./...
+```go
+import "github.com/openpak/xb-common/xbcrypto"
 ```
 
-Versioning: semver tags `vX.Y.Z`; services pin a version in go.mod and never use
-`replace` directives in committed files.
+Services pin a version in go.mod; details in [deploy](docs/deploy.md).
+
+## Docs
+
+- [Protocol](docs/protocol.md)
+- [Evidence](docs/evidence.md)
+- [Deploy](docs/deploy.md)
+- [Notes](docs/notes.md)
+
+## Licence
+
+AGPL-3.0-only. See [LICENSE](LICENSE).
